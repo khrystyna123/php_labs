@@ -6,7 +6,7 @@
         </div>
 
         <div>
-            <label><input type="submit" name="submit1" /></label>
+            <label><input type="submit" name="submit1" value="Знайти"/></label>
         </div>
     </form>
 </div>

@@ -17,7 +17,9 @@ if (isset($_POST['submit'])) {
     $mysqli->query($query);
 }
 
-if ($result = $mysqli->query("SELECT * FROM info ORDER BY price ASC")) {
+if ($result = $mysqli->query("SELECT brand, model, year_of_edition, price, 
+                                        date_of_sale, name_of_customer 
+                                        FROM info ORDER BY price ASC")) {
     include_once 'tables/tableFromDatabase.php';
     printInfo($result);
 }
@@ -42,7 +44,9 @@ if ($result = $mysqli->query("SELECT count(id) as number, brand FROM info GROUP 
 require_once 'forms/formFind.php';
 
 if (isset($_GET['submit1'])) {
-    if ($result = $mysqli->query("SELECT * FROM info WHERE name_of_customer like '%".$_GET['string']."%'")) {
+    if ($result = $mysqli->query("SELECT brand, model, year_of_edition, price, 
+                                            date_of_sale, name_of_customer 
+                                            FROM info WHERE name_of_customer like '%".$_GET['string']."%'")) {
         include_once 'tables/tableFromDatabase.php';
         printInfo($result);
     }

@@ -14,7 +14,7 @@ echo '<link rel="stylesheet" href="../styles/tableStyle.css">
     </tr>';
 
 while ($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["brand"]. "</td><td>" . $row["model"].
+    echo "<tr><td>" . $row["brand"]. "</td><td>" . $row["model"].
         "</td><td>" . $row["year_of_edition"]. "</td><td>" . $row["price"]. "</td><td>"
         . $row["date_of_sale"]. "</td><td>" . $row["name_of_customer"]. "</td></tr>";
 }

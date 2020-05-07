@@ -44,7 +44,7 @@
         </div>
 
         <div>
-            <label><input type="submit" name="submit" /></label>
+            <label><input type="submit" name="submit" value="Зберегти" /></label>
         </div>
     </form>
 </div>

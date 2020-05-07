@@ -1,11 +1,11 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "111";
-$dbname = "monitors";
+include_once("classes/Dbconfig.php");
 
-$mysqli = new mysqli($servername, $username, $password, $dbname);
+$connectMysql = new Dbconfig();
+
+$mysqli = new mysqli($connectMysql->servername, $connectMysql->username, $connectMysql->password,
+    $connectMysql->dbname);
 if ($mysqli->connect_errno) {
     echo "Не вдалось підключитись до MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
