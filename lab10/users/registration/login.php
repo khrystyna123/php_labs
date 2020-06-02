@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Логін</title>
-    <link rel="stylesheet" type="text/css" href="static/css/register_style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/register_style.css">
 </head>
 <body>
 <div class="header">

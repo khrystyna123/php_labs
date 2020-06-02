@@ -1,3 +1,11 @@
+<?php  include('../users/config.php'); ?>
+
+<?php
+    global $conn;
+    $verse = $conn->query("SELECT * FROM pages WHERE page='home' AND id < 7");
+    $text = $conn->query("SELECT * FROM pages WHERE page='home' AND id = 7");
+?>
+
 <?php require_once('../includes/header.php') ?>
     <div class="container">
     <?php include('../includes/navbar.php') ?>
@@ -7,22 +15,17 @@
         <hr>
         <div>
             <img src="../static/images/index.jpeg" style="float: left">
-            <p style="text-align: right">«… Заборони треба зняти і дати українцям повну свободу</p>
+            <?php while ($row = $verse->fetch_assoc()) {
+                echo "<p style=\"text-align: right\">" . $row["text"]. "</p><br>";
+            } ?>
             <br>
-            <p style="text-align: right"> і спроможність розвивати своє письменство, науку і штуку (мистецтво),</p>
-            <br>
-            <p style="text-align: right">своє життя громадське.</p>
-            <br>
-            <p style="text-align: right">Треба горнутися до свого українського, заохочувати до нього,</p>
-            <br>
-            <p style="text-align: right">розширювати його всякими способами».</p>
-            <br>
-            <p style="text-align: right">М. С. Грушевський</p>
-            <br>
-            <br>
-            <p><b>Миха́йло Сергі́йович Груше́вський</b> (29 вересня 1866, Холм, Російська імперія — 26 листопада 1934 або 24 листопада 1934, Кисловодськ, СРСР) — український історик, громадський та політичний діяч. Голова Центральної Ради Української Народної Республіки (1917—1918). Член Історичного товариства ім. Нестора-Літописця, дійсний член Чеської АН (1914), почесний член Київського товариства старожитностей і мистецтв (1917), член-кореспондент ВУАН (1923) та АН СРСР (1929), багаторічний голова Наукового Товариства ім. Шевченка у Львові (1897—1913), завідувач кафедри історії Львівського університету (1894—1914), автор понад 2000 наукових праць. </p>
+            <?php
+                $row = $text->fetch_assoc();
+                echo "<p><b>Миха́йло Сергі́йович Груше́вський </b>" . $row["text"]. "</p><br>";
+            ?>
         </div>
 
     </div>
 
 <?php include('../includes/footer.php') ?>
+

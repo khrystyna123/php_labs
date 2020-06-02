@@ -18,7 +18,7 @@ $roles = ['admin', 'user'];
     <div class="logo">
     </div>
     <div class="user-info">
-        <a href="../logout.php" class="logout-btn">Вихід</a>
+        <a href="../users/registration/logout.php" class="logout-btn">Вихід</a>
     </div>
 </div>
 <div class="container content">

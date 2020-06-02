@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Особистий кабінет</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/admin_style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/admin_style.css">
 </head>
 
 <?php $posts = getAllPosts(); ?>

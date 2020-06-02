@@ -3,12 +3,12 @@ session_start();
 
 if (!isset($_SESSION['user'])) {
     $_SESSION['msg'] = "Спочатку Ви маєте зареєструватися";
-    header('location: login.php');
+    header('location: registration/login.php');
 }
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: login.php");
+    header("location: registration/login.php");
 }
 ?>
 
@@ -40,12 +40,12 @@ if (isset($_GET['logout'])) {
                 <?php  if (isset($_SESSION['user'])) : ?>
                     <strong><?php echo $_SESSION['user']['username']; ?></strong>
                     <br>
-                    <a href="create_post.php">Створити статтю</a>
+                    <a href="account/create_post.php">Створити статтю</a>
 
-                    <a href="posts.php">Мої статті</a>
+                    <a href="account/posts.php">Мої статті</a>
                     <small>
                         <br>
-                        <a href="../logout.php" class="logout-btn">Вихід</a>
+                        <a href="registration/logout.php" class="logout-btn">Вихід</a>
                     </small>
 
                 <?php endif ?>

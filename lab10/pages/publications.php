@@ -1,6 +1,6 @@
-<?php require_once('../config.php') ?>
-<?php require_once('../includes/public_functions.php') ?>
-<?php require_once('../includes/registration_login.php') ?>
+<?php require_once('../users/config.php') ?>
+<?php require_once('../users/account/post_functions.php') ?>
+<?php require_once('../users/server.php') ?>
 <?php $posts = getPublishedPosts(); ?>
 <?php require_once('../includes/header.php') ?>
 
@@ -14,8 +14,8 @@
         if (!isset($_SESSION['user'])) {
             echo
             '<div style="text-align: right">
-                <a href="../login.php">Логін</a>
-                <a href="../register.php">Реєстрація</a>
+                <a href="../users/registration/login.php">Логін</a>
+                <a href="../users/registration/register.php">Реєстрація</a>
             </div>';
 
         }

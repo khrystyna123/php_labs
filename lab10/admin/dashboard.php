@@ -16,7 +16,7 @@
     <?php if (isset($_SESSION['user'])): ?>
         <div class="user-info">
             <span><?php echo $_SESSION['user']['username'] ?></span> &nbsp; &nbsp;
-            <a href="../logout.php" class="logout-btn">Вихід</a>
+            <a href="../users/registration/logout.php" class="logout-btn">Вихід</a>
         </div>
     <?php endif ?>
 </div>
@@ -25,7 +25,7 @@
         <a href="users.php" class="first">
             <span>Користувачі</span>
         </a>
-        <a href="../users/posts.php">
+        <a href="../users/account/posts.php">
             <span>Опубліковаі статті</span>
         </a>
     </div>
